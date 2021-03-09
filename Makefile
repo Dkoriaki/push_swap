@@ -14,10 +14,25 @@ CC			=	clang
 
 CFLAGS		=	-Wall -Wextra -Werror
 
-all:			$(NAME_PS) $(NAME_C)
+all:			$(NAME_C) $(NAME_PS)
 
 %.o: %.c
 				$(CC) $(CFLAGS) -c $<
 
 $(NAME_PS) :	$(OBJS_PS)
-					
+					$(CC) $(OBJS_PS) $(CFLAGS) -o $@
+
+$(NAME_C) :	$(OBJS_C)
+					$(CC) $(OBJS_C) $(CFLAGS) -o $@
+
+clean :
+				rm -f $(OBJS_C)
+				rm -f $(OBJS_PS)
+
+fclean :	clean
+				rm -f (NAME_C)
+				rm -f (NAME_PS)
+
+re :		fclean all
+
+.PHONY: all clean fclean re
