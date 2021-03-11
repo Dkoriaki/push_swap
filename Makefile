@@ -7,7 +7,8 @@ NAME_C		=	checker
 SRCS_C		=	./srcs/checker/checker.c \
 					./srcs/utils/get_next_line.c \
 					./srcs/utils/get_next_line_utils.c \
-					./srcs/utils/parsing.c
+					./srcs/utils/parsing.c \
+					./srcs/utils/utils.c
 
 #OBJS_PS		=	$(SRCS_PS:.c=.o)
 

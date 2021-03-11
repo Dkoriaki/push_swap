@@ -24,6 +24,8 @@ typedef struct	s_pile {
 	struct s_pile	*next;
 }				t_pile;
 
+int				ft_atoi(const char *str);
+void			ft_init(int ac, char **av);
 int				ft_check_args(int ac, char **av);
 int				ft_isdigit(char *nb);
 int				get_next_line(int fd, char **line);
